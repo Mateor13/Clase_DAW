@@ -211,4 +211,37 @@ const costumers = [
 ]
 
 boys.forEach((b,i)=>{console.log(`${i+1}.- ${b}`)})
-costumers.forEach((c,i)=> console.log(`${i+1} ${c.order} ${c.name}`))
+costumers.forEach((c,i)=> console.log(`${i+1}.- 
+    ${c.order}-
+    ${c.name}`))
+
+const services =[
+    {
+        name: "Basic",
+        mount: 5,
+        image: "photo/service1.png",
+        details: ["Atención familiar", "Grupo social"]
+    },
+    {
+        name: "Plus",
+        mount: 25,
+        image: "photo/service2.png",
+        details: ["Atención diaria", "Seguro médicos"]
+    }
+]
+
+const newService = services.map((s)=>{
+    return {
+        name: s.name,
+        image: s.image
+    }
+})
+console.log(newService);
+
+const newService2 = services.map(s=>(
+    {
+        name: s.name,
+        image: s.image
+    }
+))
+console.log(newService2);
