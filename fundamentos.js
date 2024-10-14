@@ -190,5 +190,25 @@ const VideoGame = {
 }
 console.log(VideoGame)
 
+const boys = ["Peter", "Juan", "Luisa", "Anahi", "Matheus"]
 
+const costumers = [
+    {
+        name: "Luis",
+        order: 45,
+        place: "Floresta"
+    },
+    {
+        name: "Janneth",
+        order: 45,
+        place: "Villaflora"
+    },
+    {
+        name: "Luis",
+        order: 45,
+        place: "Floresta"
+    },
+]
 
+boys.forEach((b,i)=>{console.log(`${i+1}.- ${b}`)})
+costumers.forEach((c,i)=> console.log(`${i+1} ${c.order} ${c.name}`))
