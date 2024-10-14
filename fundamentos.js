@@ -289,3 +289,10 @@ Intermedio
 
 DOM - API PARA MANIPULAR LOS ELEMENTOS EN HTML
 HTML - Se puede considerar como un leguaje de programación cuando ocupa un motor de plantillas*/
+
+//Programación imperativa
+// JS PURO - Vanilla-JS
+//Programación
+
+//Programación declarativa
+//REACT
