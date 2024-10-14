@@ -245,3 +245,47 @@ const newService2 = services.map(s=>(
     }
 ))
 console.log(newService2);
+
+const equipments = ["Tubo de Oxigeno", "Camilla", "Termometros", "Medidores de P."]
+
+//ES6
+//Desestructuración
+const [equipment1, equipment2, , equipment4] = equipments
+console.log(equipment4)
+
+const categories = ["Camas", "Balanceados", "Juguetes", "Accesorios", "Ropa"]
+
+categories.length <= 5 ? console.log("Registrar categoria"): console.log("No se puede registrar")
+
+categories.push("Medicamentos") //Agregar elemento al final
+categories.unshift("Adopciones") //Agregar elemento al inicio
+
+categories.pop() //Elimina el último elemento
+categories.shift() //Elimina el primer elemento 
+console.log(categories)
+
+let resultCategorie = categories.find(c=>(c === "Camas"))
+console.log(resultCategorie)
+resultCategorie ? console.log("Mostrar subcategorías"): console.log("No existe esa categoría")
+
+let resultCategorieFilter = categories.filter(c=>(c.startsWith('B')))
+console.log(resultCategorieFilter)
+
+//ES6 
+const servicesCharge = ["Grúa", "Material", "Herramientas"] 
+const servicesMachines = ["Volqueta", "Trailer", "Tractores", "Excavadora"]
+
+// ...Rest (Agrupar) //Almacena todos los valores restantes
+const [machine1, machine2, ...machines] = servicesMachines
+console.log(machines)
+
+// ...Spread (Expandir) //Une todos los elementos restantes
+let allServices = []
+allServices = [...servicesCharge, ...servicesMachines]
+console.log(allServices)
+
+/*--------------------------------------------------------------------------------------------
+Intermedio
+
+DOM - API PARA MANIPULAR LOS ELEMENTOS EN HTML
+HTML - Se puede considerar como un leguaje de programación cuando ocupa un motor de plantillas*/
