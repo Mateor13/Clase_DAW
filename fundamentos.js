@@ -296,3 +296,5 @@ HTML - Se puede considerar como un leguaje de programación cuando ocupa un moto
 
 //Programación declarativa
 //REACT
+
+const hola = "" 
