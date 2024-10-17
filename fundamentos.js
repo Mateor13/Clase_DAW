@@ -380,4 +380,10 @@ STAGE 2 = PROYECTO 100% BACKEND
 STAGE 3 = PROYECTO FULLSTACK
 10 SEMANAS
 */
+/*
+Non-opinated: Se puede tener definir como realizar un proyecto como uno desee
+Routes: Trae un recurso de lo que pide el usuario
+Servidor tiene registrada la ruta que se pide y dar la información
+
+*/
 
