@@ -207,7 +207,7 @@ const costumers = [
         name: "Luis",
         order: 45,
         place: "Floresta"
-    },
+    }
 ]
 
 boys.forEach((b,i)=>{console.log(`${i+1}.- ${b}`)})
@@ -275,11 +275,11 @@ console.log(resultCategorieFilter)
 const servicesCharge = ["Grúa", "Material", "Herramientas"] 
 const servicesMachines = ["Volqueta", "Trailer", "Tractores", "Excavadora"]
 
-// ...Rest (Agrupar) //Almacena todos los valores restantes
+// ...parametrosRest (Agrupar) //Almacena todos los valores restantes
 const [machine1, machine2, ...machines] = servicesMachines
 console.log(machines)
 
-// ...Spread (Expandir) //Une todos los elementos restantes
+// ...operadorSpread (Expandir) //Une todos los elementos restantes
 let allServices = []
 allServices = [...servicesCharge, ...servicesMachines]
 console.log(allServices)
