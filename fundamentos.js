@@ -296,3 +296,88 @@ HTML - Se puede considerar como un leguaje de programación cuando ocupa un moto
 
 //Programación declarativa
 //REACT
+
+//Programación Asincrona
+// Callback
+
+const getUserBDD = () => {console.log({id:123, name:"Pancho", rol:"Admin"})}
+setTimeout(getUserBDD, 5000)
+
+//Callback - Hell
+//Promesas
+const connectionBBDExterna = (dataConnection) => {
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            dataConnection ? resolve("Conexion-OK"): reject("Connection-bad")
+        }, 3000);
+    })
+}
+
+//Then y catch
+connectionBBDExterna(false)
+    .then((response)=> {console.log(response)})
+    .catch((error)=>{console.log(error)});
+
+//Async - await    
+const verifyConnection = async () => {
+   console.log(await connectionBBDExterna(true))
+}
+verifyConnection()
+
+const verifyConnection2 = async () => {
+
+    try{
+    console.log(await connectionBBDExterna(false))
+    } catch (error){
+        console.log(error)
+    }
+ }
+ verifyConnection2()
+
+fetch("https://dog.ceo/api/breeds/image/random")
+ .then((request)=>(request.json()))
+ .then((data)=>{console.log(data)})
+ .catch((error)=>{console.log(error)})
+
+ const getDog = async () => {
+    try{
+   let request = await fetch("https://dog.ceo/api/breeds/image/random")
+   let data = await request.json()
+   console.log(data)
+ } catch (error) {
+    console.log(error)
+ }}
+ getDog()
+
+const tokenG = "lerx9FDWD5PH78M207Cj95ac4KTt8G3v"
+const URLG = "https://api.giphy.com/v1/stickers/trending"
+fetch(`${URLG}?api_key=${tokenG}`)
+.then((request)=>(request.json()))
+.then((data)=>{console.log(data)})
+.catch((error)=>{console.log(error)})
+
+/* 
+   https://faceio.net/
+   https://publicapis.dev/
+   https://api-ninjas.com/
++/
+
+/*-------------------------------------------------------------------------------------
+ADVANCE
+localStorage = Se mantiene iniciada la sesión en un mismo navegador, dado que, persisten las credenciales
+MODULES
+COMMONJS = require
+ESMODULES = import o from
+sessionStorage = Se mantiene en una pagina especifica y unica
+--------------------------------------------------------------------------------------------------------------*/
+
+/*
+BACKEND DEVELOPERS
+STAGE 1 = FUNDAMENTOS AGNOSTICOS
+LIBRERIA = SOLVENTA UNA SOLA PROBLEMATICA
+FRAMEWORK = AYUDA A RESOLVER UN PROBLEMA MÁS COMPLEJO
+STAGE 2 = PROYECTO 100% BACKEND
+STAGE 3 = PROYECTO FULLSTACK
+10 SEMANAS
+*/
+
